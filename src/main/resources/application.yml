@@ -6,7 +6,7 @@ server:
 # DATASOURCE
 jdbc:
     dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
-    url: jdbc:mysql://localhost:3306/ssm?useUnicode=true&amp;charaterEncoding=utf-8
+    url: jdbc:mysql://192.168.56.101:3306/ssm?useUnicode=true&amp;charaterEncoding=utf-8
     databaseName: ssm
     serverName: 127.0.0.1
     username: root
@@ -27,8 +27,8 @@ spring:
 # MyBatis
 mybatis:
     typeAliasesPackage: com.je.demo.**.domain
-    mapperLocations: classpath:/com/je/demo/api/**/dao/*.xml
-    configLocation: classpath:/mybatis-config.xml
+    mapperLocations: classpath:com/je/demo/*/*/dao/mapper/*.xml
+    configLocation: classpath:mybatis-config.xml
 
 # LOGGING
 logging:
